@@ -29,7 +29,7 @@ Your testing data can be any length, but suggest you first using the same length
 
 
 note that the attached dataset is very small, you use use the user-filter-20000items-session5.csv.zip 
-
+We are trying to release a sequential dataset, which has very good sequence properties.
 
 
 ## References
