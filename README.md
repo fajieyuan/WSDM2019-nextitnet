@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 strongly suggest running this job on GPU, which should be more 20 times faster than on CPU
 e.g.,
 
@@ -54,3 +55,8 @@ Your testing data can be any length, but suggest you first using the same length
 [5]:https://github.com/tobyyouup/conv_seq2seq
 
 [6]:https://github.com/buriburisuri/sugartensor
+=======
+# nextitnet
+A Simple Convolutional Generative Network for Next Item Recommendation
+>>>>>>> d1a5ca57060c955d97bde20f43cd27bfbdce6608
+# This Is My First Testing Description....
