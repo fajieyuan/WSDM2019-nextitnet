@@ -1,11 +1,11 @@
-<<<<<<< HEAD
-strongly suggest running this job on GPU, which should be more 20 times faster than on CPU
+
+strongly suggest running this job on GPU, which is at least 20 times faster than on CPU
 e.g.,
 
 
 Please cite this paper if you find our code is useful
 @article{yuan2018simple,
-  title={A Simple but Hard-to-Beat Baseline for Session-based Recommendations},
+  title={A Simple Convolutional Generative Network for Next Item Recommendation},
   author={Yuan, Fajie and Karatzoglou, Alexandros and Arapakis, Ioannis and Jose, Joemon M and He, Xiangnan},
   journal={arXiv preprint arXiv:1808.05163},
   year={2018}
@@ -28,6 +28,7 @@ Your training data should be some sequences of the same length, if the sequences
 Your testing data can be any length, but suggest you first using the same length for evalution, once you are familar with the model, you can change your data or slightly change the code to meet your requirements.
 
 
+note that the attached dataset is very small, you use use the user-filter-20000items-session5.csv.zip 
 
 
 
@@ -58,5 +59,4 @@ Your testing data can be any length, but suggest you first using the same length
 =======
 # nextitnet
 A Simple Convolutional Generative Network for Next Item Recommendation
->>>>>>> d1a5ca57060c955d97bde20f43cd27bfbdce6608
-# This Is My First Testing Description....
+
