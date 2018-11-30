@@ -20,7 +20,7 @@ def main():
     parser.add_argument('--beta1', type=float, default=0.9,
                         help='hyperpara-Adam')
 
-    parser.add_argument('--datapath', type=str, default='Data/Session/history_sequences_20181014_fajie.csv',
+    parser.add_argument('--datapath', type=str, default='Data/Session/user-filter-20000items-session5.csv',
                         help='data path')
     parser.add_argument('--eval_iter', type=int, default=10,
                         help='Sample generator output evry x steps')
@@ -55,7 +55,7 @@ def main():
         #all parameters shuold be consist with those in nextitred.py!!!!
         'item_size': len(items),
         'dilated_channels': 100,
-        'dilations': [1, 4,],
+        'dilations': [1, 2,],
         'kernel_size': 3,
         'learning_rate':0.001,
         'batch_size':32,
