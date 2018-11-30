@@ -23,7 +23,9 @@ variables have been saved when you run nextitrec.py.
 
 Your training data should be some sequences of the same length, if the sequences are not the same length, padding 0 in the beggining, e.g.,
 1,44,67,78,1000
+
 0,0,88,98,1
+
 0,88,981,13,17
 
 Your testing data can be any length, but suggest you first using the same length for evalution, once you are familar with the model, you can change your data or slightly change the code to meet your requirements.
