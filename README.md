@@ -22,6 +22,7 @@ variables have been saved when you run nextitrec.py.
 
 
 Your training data should be some sequences of the same length, if the sequences are not the same length, padding 0 in the beggining, e.g.,
+
 1,44,67,78,1000
 
 0,0,88,98,1
