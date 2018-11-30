@@ -4,6 +4,7 @@ e.g.,
 
 
 Please cite this paper if you find our code is useful
+
 @article{yuan2018simple,
   title={A Simple Convolutional Generative Network for Next Item Recommendation},
   author={Yuan, Fajie and Karatzoglou, Alexandros and Arapakis, Ioannis and Jose, Joemon M and He, Xiangnan},
@@ -56,7 +57,7 @@ We are trying to release a sequential dataset, which has very good sequence prop
 [5]:https://github.com/tobyyouup/conv_seq2seq
 
 [6]:https://github.com/buriburisuri/sugartensor
-=======
+
 # nextitnet
 A Simple Convolutional Generative Network for Next Item Recommendation
 
