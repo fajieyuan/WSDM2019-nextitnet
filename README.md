@@ -1,5 +1,5 @@
 
-strongly suggest running this job on GPU, which is at least 20 times faster than on CPU
+strongly suggest running the code on GPU, which is at least 20 times faster than on CPU
 e.g.,
 
 
