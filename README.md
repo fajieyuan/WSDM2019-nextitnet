@@ -1,6 +1,6 @@
 
 strongly suggest running the code on GPU, which is at least 20 times faster than on CPU
-e.g.,
+
 
 
 Please cite this paper if you find our code is useful
@@ -13,7 +13,7 @@ Please cite this paper if you find our code is useful
 }
 
 
-1 )you can run nextitrec.py directly, which includes training and testing
+1 )you can run nextitrec.py (python nextitrec.py) directly, which includes training and testing
 
 2 )you can aslo run nextitrec_generate.py, which is only for predicting/generating. But you need check whether your model 
 variables have been saved when you run nextitrec.py. 
