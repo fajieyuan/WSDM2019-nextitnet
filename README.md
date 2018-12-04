@@ -5,11 +5,12 @@ strongly suggest running the code on GPU, which is at least 20 times faster than
 
 Please cite this paper if you find our code is useful
 
-@article{yuan2018simple,
-  title={A Simple Convolutional Generative Network for Next Item Recommendation},
+@inproceedings{yuan2018simple,
+  title={A Simple Convolutional Generative Network for Next Item Recommendation },
   author={Yuan, Fajie and Karatzoglou, Alexandros and Arapakis, Ioannis and Jose, Joemon M and He, Xiangnan},
-  journal={arXiv preprint arXiv:1808.05163},
-  year={2018}
+  booktitle={Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining},
+  year={2019},
+  organization={ACM}
 }
 
 
