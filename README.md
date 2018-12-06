@@ -37,6 +37,8 @@ note that the attached dataset is very small, you can use the user-filter-20000i
 We are trying to release a sequential dataset, which has very good sequence properties.
 
 
+
+
 ## References
 
 - [Tensorflow GatedCNN][1] code
@@ -44,7 +46,8 @@ We are trying to release a sequential dataset, which has very good sequence prop
 - [Tensorflow Wavenet][3] code
 - [Tensorflow Bytenet][4] code
 - [Tensorflow Convolutional Seq2Seq][5] code
-- [Sugar Tensor Source Code][6] For implementing some ops
+- [Sugar Tensor Source Code][6] code
+- [Tensorflow RNN][7] code
 
 
 
@@ -61,6 +64,10 @@ We are trying to release a sequential dataset, which has very good sequence prop
 [5]:https://github.com/tobyyouup/conv_seq2seq
 
 [6]:https://github.com/buriburisuri/sugartensor
+
+[7]:https://github.com/dennybritz/cnn-text-classification-tf
+
+[7]:https://github.com/tensorflow/models/tree/master/tutorials/rnn
 
 # nextitnet
 A Simple Convolutional Generative Network for Next Item Recommendation
