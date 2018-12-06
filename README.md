@@ -39,6 +39,7 @@ We are trying to release a sequential dataset, which has very good sequence prop
 
 
 
+
 ## References
 
 - [Tensorflow GatedCNN][1] code
@@ -47,10 +48,8 @@ We are trying to release a sequential dataset, which has very good sequence prop
 - [Tensorflow Bytenet][4] code
 - [Tensorflow Convolutional Seq2Seq][5] code
 - [Sugar Tensor Source Code][6] code
-- [Tensorflow RNN][7] code
-
-
-
+- [Tensorflow Convolutional Neural Networks for Sentence Classification][7] code
+- [Tensorflow RNN ][7] code
 
 
 [1]:https://github.com/anantzoid/Language-Modeling-GatedCNN
@@ -67,7 +66,7 @@ We are trying to release a sequential dataset, which has very good sequence prop
 
 [7]:https://github.com/dennybritz/cnn-text-classification-tf
 
-[7]:https://github.com/tensorflow/models/tree/master/tutorials/rnn
+[8]:https://github.com/tensorflow/models/tree/master/tutorials/rnn
 
 # nextitnet
 A Simple Convolutional Generative Network for Next Item Recommendation
