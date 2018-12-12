@@ -16,7 +16,7 @@ Please cite this paper if you find our code is useful
 
 1 )you can run nextitrec.py (python nextitrec.py) directly, which includes training and testing
 
-2 )you can also run nextitrec_generate.py, which is only for predicting/generating. But you need check whether your model 
+2 )you can also run nextitrec_generate.py, which is only for predicting/generating. But you need make sure whether your model 
 variables have been saved when you run nextitrec.py. 
 
 3 )MostPop.py is a baseline based on item popularity
