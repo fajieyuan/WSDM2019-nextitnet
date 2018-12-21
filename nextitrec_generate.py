@@ -88,17 +88,17 @@ def main():
     rec_preds_20 = []  # 1
     ndcg_preds_20 = []  # 1
     while (batch_no_test + 1) * batch_size_test < valid_set.shape[0]:
-        text_batch = valid_set[batch_no_test * batch_size_test: (batch_no_test + 1) * batch_size_test, :]
+        item_batch = valid_set[batch_no_test * batch_size_test: (batch_no_test + 1) * batch_size_test, :]
         [probs] = sess.run(
             [itemrec.g_probs],
             feed_dict={
-                itemrec.input_predict: text_batch
+                itemrec.input_predict: item_batch
             })
         for bi in range(probs.shape[0]):
             pred_words_5 = utils.sample_top_k(probs[bi][-1], top_k=args.top_k)  # top_k=5
             pred_words_20 = utils.sample_top_k(probs[bi][-1], top_k=args.top_k + 15)
 
-            true_word = text_batch[bi][-1]
+            true_word = item_batch[bi][-1]
             predictmap_5 = {ch: i for i, ch in enumerate(pred_words_5)}
             pred_words_20 = {ch: i for i, ch in enumerate(pred_words_20)}
 
