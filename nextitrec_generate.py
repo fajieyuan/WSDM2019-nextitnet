@@ -95,15 +95,15 @@ def main():
                 itemrec.input_predict: item_batch
             })
         for bi in range(probs.shape[0]):
-            pred_words_5 = utils.sample_top_k(probs[bi][-1], top_k=args.top_k)  # top_k=5
-            pred_words_20 = utils.sample_top_k(probs[bi][-1], top_k=args.top_k + 15)
+            pred_items_5 = utils.sample_top_k(probs[bi][-1], top_k=args.top_k)  # top_k=5
+            pred_items_20 = utils.sample_top_k(probs[bi][-1], top_k=args.top_k + 15)
 
-            true_word = item_batch[bi][-1]
-            predictmap_5 = {ch: i for i, ch in enumerate(pred_words_5)}
-            pred_words_20 = {ch: i for i, ch in enumerate(pred_words_20)}
+            true_item = item_batch[bi][-1]
+            predictmap_5 = {ch: i for i, ch in enumerate(pred_items_5)}
+            pred_items_20 = {ch: i for i, ch in enumerate(pred_items_20)}
 
-            rank_5 = predictmap_5.get(true_word)
-            rank_20 = pred_words_20.get(true_word)
+            rank_5 = predictmap_5.get(true_item)
+            rank_20 = pred_items_20.get(true_item)
             if rank_5 == None:
                 curr_preds_5.append(0.0)
                 rec_preds_5.append(0.0)  # 2
