@@ -26,7 +26,7 @@ def main():
                         help='Sample generator output evry x steps')
     parser.add_argument('--save_para_every', type=int, default=10,
                         help='save model parameters every')
-    parser.add_argument('--tt_percentage', type=float, default=0.5,
+    parser.add_argument('--tt_percentage', type=float, default=0.2,
                         help='default=0.2 means 80% training 20% testing')
     parser.add_argument('--is_generatesubsession', type=bool, default=False,
                         help='whether generating a subsessions, e.g., 12345-->01234,00123,00012  It may be useful for very some very long sequences')
