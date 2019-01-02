@@ -20,7 +20,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--learning_rate', type=float, default=0.001,
                         help='Learning Rate')
-    parser.add_argument('--batch_size', type=int, default=256,
+    parser.add_argument('--batch_size', type=int, default=10,
                         help='Learning Rate')
     parser.add_argument('--sample_every', type=int, default=2000,
                         help='Sample generator output evry x steps')
@@ -40,13 +40,13 @@ def main():
                         help='Pre-Trained Model Path, to resume from')
     # parser.add_argument('--text_dir', type=str, default='Data/generator_training_data',
     #                     help='Directory containing text files')
-    parser.add_argument('--text_dir', type=str, default='Data/Session/user-filter-200000items-session10.csv-map-5to100.csv',
+    parser.add_argument('--text_dir', type=str, default='Data/Session/history_sequences_20181014_fajie_small.csv',
                         help='Directory containing text files')
     parser.add_argument('--data_dir', type=str, default='Data',
                         help='Data Directory')
     parser.add_argument('--seed', type=str, default='f78c95a8-9256-4757-9a9f-213df5c6854e,1151b040-8022-4965-96d2-8a4605ce456c',
                         help='Seed for text generation')
-    parser.add_argument('--sample_percentage', type=float, default=0.5,
+    parser.add_argument('--sample_percentage', type=float, default=0.2,
                         help='sample_percentage from whole data, e.g.0.2= 80% training 20% testing')
 
     parser.add_argument('--filter_sizes', nargs='?', default='[2,3,4]',
@@ -113,7 +113,7 @@ def main():
     print "dataset",args.text_dir
     model_options = {
         'vocab_size': len(items),
-        'residual_channels': 64,
+        'residual_channels': 100,
     }
 
 
