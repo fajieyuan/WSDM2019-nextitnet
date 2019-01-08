@@ -90,7 +90,6 @@ def main():
         # if you use nextitnet_residual_block, you can use [1, 4, ],
         # if you use nextitnet_residual_block_one, you can tune and i suggest [1, 2, 4, ], for a trial
         # when you change it do not forget to change it in nextitrec_generate.py
-        # if you find removing residual network, the performance does not obviously decrease, then I think your data does not have strong seqeunce. Change a dataset and try again.
         'dilations': [1, 2, ],
         'kernel_size': 3,
         'learning_rate':0.001,
