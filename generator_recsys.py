@@ -47,7 +47,7 @@ class NextItNet_Decoder:
         for layer_id, dilation in enumerate(model_para['dilations']):
             dilate_input = ops.nextitnet_residual_block(dilate_input, dilation,
                                                         layer_id, model_para['dilated_channels'],
-                                                        model_para['kernel_size'], causal=True, train=True)
+                                                        model_para['kernel_size'], causal=True, train=train)
         return label_seq, dilate_input
 
 
