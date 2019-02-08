@@ -19,28 +19,12 @@ class Data_Loader:
         self.item_dict = vocab_processor.vocabulary_._mapping
 
 
-
-
-
     def load_generator_data(self, sample_size):
         text = self.text
         mod_size = len(text) - len(text)%sample_size
         text = text[0:mod_size]
         text = text.reshape(-1, sample_size)
         return text, self.vocab_indexed
-
-
-    def load_translation_data(self):
-        source_lines = []
-        target_lines = []
-        for i in range(len(self.source_lines)):
-            source_lines.append( self.string_to_indices(self.source_lines[i], self.source_vocab) )
-            target_lines.append( self.string_to_indices(self.target_lines[i], self.target_vocab) )
-
-        buckets = self.create_buckets(source_lines, target_lines)
-
-        
-        return buckets, self.source_vocab, self.target_vocab
 
 
     def string_to_indices(self, sentence, vocab):
