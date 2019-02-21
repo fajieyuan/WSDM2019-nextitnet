@@ -16,7 +16,7 @@ import argparse
 # if you are dealing very huge industry dataset, e.g.,several hundred million items, you may have memory problem during training, but it 
 # be easily solved by simply changing the last layer, you do not need to calculate the cross entropy loss
 # based on the whole item vector. Similarly, you can also change the last layer (use tf.nn.embedding_lookup or gather) in the prediction phrase 
-# if you want to just rank the recalled items instead of all items
+# if you want to just rank the recalled items instead of all items. The current code should be okay if the item size < 5 million.
 
 
 
