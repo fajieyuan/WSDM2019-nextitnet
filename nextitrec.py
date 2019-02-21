@@ -13,6 +13,9 @@ import argparse
 # nextitrec_generate.py can only be run when the model parameters are saved, i.e.,
 #  save_path = saver.save(sess,
 #                       "Data/Models/generation_model/model_nextitnet.ckpt".format(iter, numIters))
+# if you are dealing very huge industry dataset, e.g.,several hundred million items, you may have memory problem during training, but it 
+# be easily solved by simply change the last layer by using same sampling method, you do not need to calculate the cross entropy loss
+# by using the whole vector. Similarly, you can also change the last layer (use tf.nn.embedding_lookup or gather) in the prediction phrase by using the recalled items instead of calculating the all items
 
 
 
