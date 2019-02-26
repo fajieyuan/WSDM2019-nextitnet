@@ -1,5 +1,5 @@
 
-strongly suggest running the code on GPU, which is at least 20 times faster than on CPU
+strongly suggest running the code on GPU, which is at least 20 times faster than on CPU. If you want to use this model in industry with hundred millions of items. You will have memory problem during training and prediction. In this case, you just need to slightly change the final layer by using negative sampling instead of outputing a huge softmax. As for predicting, you only need to rank your candidate items by using tf.nn.embedding_lookup or tf.gather. There are many tricks to solve memory problems and you can email me if you donot how to do it. 
 
 
 
