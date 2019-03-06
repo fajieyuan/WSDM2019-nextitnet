@@ -73,6 +73,43 @@ class NextItNet_Decoder:
         probs_flat = tf.nn.softmax(logits_2D)
         # self.g_probs = tf.reshape(probs_flat, [-1, tf.shape(self.input_predict)[1], model_para['item_size']])
         self.g_probs = tf.reshape(probs_flat, [-1, tf.shape(label_seq)[1], model_para['item_size']])
+        
+     
+    # output top-n based on recalled items instead of all items. You can use this interface for practical recommender systems.
+    def predict_graph_onrecall(self, is_negsample=False, reuse=False):
+
+        if reuse:
+            tf.get_variable_scope().reuse_variables()
+        self.input_predict = tf.placeholder('int32', [None, None], name='input_predict')
+        self.input_recall = tf.placeholder('int32', [None, None], name='input_recall')# candidate items
+
+
+        label_seq, dilate_input = self.model_graph(self.input_predict, train=False)
+        model_para = self.model_para
+
+        if is_negsample:
+            logits_2D=dilate_input[:, -1:, :]
+            recall_mat = tf.nn.embedding_lookup(self.softmax_w, self.input_recall)
+            logits_2D = tf.matmul(logits_2D, tf.transpose(recall_mat,[0,2,1]))
+            logits_2D=tf.reshape(logits_2D, [-1, tf.shape(self.input_recall)[1]])
+            recall_bias = tf.nn.embedding_lookup(self.softmax_b, self.input_recall)
+            logits_2D=tf.add(logits_2D,recall_bias)
+
+        else:
+            # logits = ops.conv1d(tf.nn.relu(dilate_input), model_para['item_size'], name='logits')
+            logits = ops.conv1d(tf.nn.relu(dilate_input[:, -1:, :]), model_para['item_size'], name='logits')
+            logits_2D = tf.reshape(logits, [-1, model_para['item_size']])
+
+
+        probs_flat = tf.nn.softmax(logits_2D, name='softmax')
+
+        self.g_probs = probs_flat
+        # newly added for weishi, since each input is one user (i.e., a batch), in fact we just need to rank the first batch, the below code is to select top-5
+        # self.top_k= tf.nn.top_k(self.g_probs[:,-1], k=model_para['top_k'],name='top-k')
+        
+        #be carefule with the top-k values since the index represents the orders of your recalled items but not the original order.
+        self.top_k = tf.nn.top_k(self.g_probs, k=model_para['top_k'], name='top-k')
+        # self.top_k=tf.gather(self.input_recall, tf.contrib.framework.argsort(self.g_probs),name='top-k')
 
 
 
