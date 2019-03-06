@@ -62,9 +62,9 @@ def main():
     #history_sequences_20181014_fajie_smalltest.csv    /data/weishi_ai_ceph/fajieyuan/nextitnet-master-2/Data/Session/history_sequences_20181014_fajie.csv
     # /data/weishi_ai_ceph/fajieyuan/nextitnet-master-2/Data/Session/history_sequences_20181014_fajie.index
     # /data/weishi_ai_ceph/fajieyuan/nextitnet-master-2/Data/Models/generation_model/model_nextitnet.pb
-    parser.add_argument('--datapath', type=str, default='Data/Session/user-filter-20000items-session5.csv',
+    parser.add_argument('--datapath', type=str, default='Data/Session/user-filter-20000items-session5_index.csv',
                         help='data path')
-    parser.add_argument('--datapath_index', type=str, default='Data/Session/user-filter-20000items-session5_index.csv',
+    parser.add_argument('--datapath_index', type=str, default='Data/Session/',
                         help='data path')
     parser.add_argument('--eval_iter', type=int, default=2000,
                         help='Sample generator output evry x steps')
@@ -102,7 +102,7 @@ def main():
     model_para = {
         #if you changed the parameters here, also do not forget to change paramters in nextitrec_generate.py
         'item_size': len(items),
-        'dilated_channels': 64,
+        'dilated_channels': 100,#200 is usually better
         # if you use nextitnet_residual_block, you can use [1, 4, ],
         # if you use nextitnet_residual_block_one, you can tune and i suggest [1, 2, 4, ], for a trial
         # when you change it do not forget to change it in nextitrec_generate.py
@@ -110,7 +110,7 @@ def main():
         'dilations': [1, 2,],
         'kernel_size': 3,
         'learning_rate':0.001,
-        'batch_size':32,
+        'batch_size':32,#128 is usually better
         'iterations':100,
         'top_k': args.top_k,
         'is_negsample':True #False denotes no negative sampling. You have to use True if you want to do it based on recalled items
