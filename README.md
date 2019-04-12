@@ -36,8 +36,9 @@ Your training data should be some sequences of the same length, if the sequences
 Your testing data can be any length, but suggest you first using the same length for evalution, once you are familar with the model, you can change your data or slightly change the code to meet your requirements.
 
 
-note that the attached dataset is very small, you can use the user-filter-20000items-session5.csv.zip 
-We are trying to release a sequential dataset, which has very good sequence properties.
+note that the attached dataset is very small, you can use the user-filter-20000items-session5.csv.zip or
+download a large sequential dataset of tiktok: https://pan.baidu.com/s/1sdvA-prlW8cBVtFuuiqF3Q  
+code (提取码):wncu
 
 
 
