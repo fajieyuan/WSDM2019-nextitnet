@@ -107,10 +107,10 @@ def main():
         # if you use nextitnet_residual_block_one, you can tune and i suggest [1, 2, 4, ], for a trial
         # when you change it do not forget to change it in nextitrec_generate.py
         # if you find removing residual network, the performance does not obviously decrease, then I think your data does not have strong seqeunce. Change a dataset and try again.
-        'dilations': [1, 4,],
+        'dilations': [1,2,4,1,2,4,],
         'kernel_size': 3,
         'learning_rate':0.001,
-        'batch_size':32,#128 is usually better
+        'batch_size':128,#128 is usually better
         'iterations':100,
         'top_k': args.top_k,
         'is_negsample':True #False denotes no negative sampling. You have to use True if you want to do it based on recalled items
