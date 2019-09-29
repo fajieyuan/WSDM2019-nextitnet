@@ -55,10 +55,10 @@ def main():
         #all parameters shuold be consist with those in nextitred.py!!!!
         'item_size': len(items),
         'dilated_channels': 100,
-        'dilations': [1, 2,],
+        'dilations': [1, 2, 1, 2, 1, 2, ],
         'kernel_size': 3,
         'learning_rate':0.001,
-        'batch_size':32,
+        'batch_size':128,
         'iterations':2,#useless, can be removed
         'is_negsample':False #False denotes no negative sampling
     }
