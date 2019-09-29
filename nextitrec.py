@@ -94,10 +94,10 @@ def main():
         # if you use nextitnet_residual_block, you can use [1, 4, ],
         # if you use nextitnet_residual_block_one, you can tune and i suggest [1, 2, 4, ], for a trial
         # when you change it do not forget to change it in nextitrec_generate.py
-        'dilations': [1, 2, ],
+        'dilations': [1, 2, 1, 2, 1, 2, ],
         'kernel_size': 3,
         'learning_rate':0.001,
-        'batch_size':32,
+        'batch_size':128,
         'iterations':400,
         'is_negsample':False #False denotes no negative sampling
     }
