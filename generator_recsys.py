@@ -56,23 +56,24 @@ class NextItNet_Decoder:
         if reuse:
             tf.get_variable_scope().reuse_variables()
         self.input_predict = tf.placeholder('int32', [None, None], name='input_predict')
+
         label_seq, dilate_input = self.model_graph(self.input_predict, train=False)
         model_para = self.model_para
 
         if is_negsample:
-            logits_2D = tf.reshape(dilate_input, [-1, model_para['dilated_channels']])
+            logits_2D = tf.reshape(dilate_input[:,-1:,:], [-1, model_para['dilated_channels']])
             logits_2D = tf.matmul(logits_2D, tf.transpose(self.softmax_w))
             logits_2D = tf.nn.bias_add(logits_2D, self.softmax_b)
         else:
-            logits = ops.conv1d(tf.nn.relu(dilate_input), model_para['item_size'], name='logits')
+            logits = ops.conv1d(tf.nn.relu(dilate_input[:,-1:,:]), model_para['item_size'], name='logits')
             logits_2D = tf.reshape(logits, [-1, model_para['item_size']])
 
-        label_flat = tf.reshape(label_seq, [-1])
+        label_flat = tf.reshape(label_seq[:,-1], [-1])
         loss = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=label_flat, logits=logits_2D)
         self.loss_test = tf.reduce_mean(loss)
         probs_flat = tf.nn.softmax(logits_2D)
         # self.g_probs = tf.reshape(probs_flat, [-1, tf.shape(self.input_predict)[1], model_para['item_size']])
-        self.g_probs = tf.reshape(probs_flat, [-1, tf.shape(label_seq)[1], model_para['item_size']])
+        self.g_probs = tf.reshape(probs_flat, [-1, 1, model_para['item_size']])
         
      
     # output top-n based on recalled items instead of all items. You can use this interface for practical recommender systems.
