@@ -5,7 +5,7 @@ You can email me if you have any questions about the performance and efficiency 
 
 If you want to use this model in product with extremely large items (e.g.,> 100 million items). You may have memory problem during training and prediction by using nextitrec.py. In this case, you just use our negative sampling setting for training, and recalled items for predicting instead of outputing a huge softmax, as shown in nextitrec__recall.py.
 
-In general, NextItNet is able to handle several millions of items with billions of interaction feedback, and is much faster than LSTM/GRU using the same training setttings.
+In general, NextItNet is able to handle several millions of items with billions of interaction feedback, and performs much faster and better than LSTM/GRU using the same training setttings.
 
 There are many tricks to solve memory and efficiency problems and you can email me if you donot know how to do it. It is also very easy to add various features by concating (tf.concat) operation before convolution or after convolution.
 
