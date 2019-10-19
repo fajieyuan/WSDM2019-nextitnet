@@ -53,7 +53,7 @@ def main():
                         help='Sample from top k predictions')
     parser.add_argument('--beta1', type=float, default=0.9,
                         help='hyperpara-Adam')
-    #history_sequences_20181014_fajie_smalltest.csv
+    #this is a demo dataset, which just let you run this code, suggest dataset link: http://grouplens.org/datasets/.
     parser.add_argument('--datapath', type=str, default='Data/Session/user-filter-20000items-session5.csv',
                         help='data path')
     parser.add_argument('--eval_iter', type=int, default=5000,
@@ -90,15 +90,15 @@ def main():
     model_para = {
         #if you changed the parameters here, also do not forget to change paramters in nextitrec_generate.py
         'item_size': len(items),
-        'dilated_channels': 100,
-        # if you use nextitnet_residual_block, you can use [1, 4, ],
+        'dilated_channels': 100,#larger is better until 512 or 1024
+        # if you use nextitnet_residual_block, you can use [1, 4, 1, 4, 1,4,],
         # if you use nextitnet_residual_block_one, you can tune and i suggest [1, 2, 4, ], for a trial
         # when you change it do not forget to change it in nextitrec_generate.py
-        'dilations': [1, 2, 1, 2, 1, 2, ],
+        'dilations': [1, 2, 1, 2, 1, 2, ],#YOU should tune this hyper-parameter, refer to the paper.
         'kernel_size': 3,
-        'learning_rate':0.001,
-        'batch_size':128,
-        'iterations':400,
+        'learning_rate':0.001,#YOU should tune this hyper-parameter
+        'batch_size':128,#YOU should tune this hyper-parameter
+        'iterations':400,# if your dataset is small, suggest adding regularization to prevent overfitting
         'is_negsample':False #False denotes no negative sampling
     }
 
