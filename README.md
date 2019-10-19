@@ -1,5 +1,6 @@
 
 strongly suggest running the code on GPU, which is at least 20 times faster than on CPU. 
+You can email me if you have any questions about the performance and efficiency of NextItNet.
 
 
 If you want to use this model in product with hundred millions of items. You may have memory problem during training and prediction by using nextitrec.py. In this case, you just need to slightly change the final layer by using negative sampling for training and recalled items for predicting instead of outputing a huge softmax, as shown in nextitrec__recall.py. 
