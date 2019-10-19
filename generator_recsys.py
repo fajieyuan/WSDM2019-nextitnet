@@ -32,6 +32,8 @@ class NextItNet_Decoder:
             loss = tf.nn.sparse_softmax_cross_entropy_with_logits(labels=label_flat, logits=logits_2D)
 
         self.loss = tf.reduce_mean(loss)
+        #regularization = 0.001 * tf.reduce_mean([tf.nn.l2_loss(v) for v in tf.trainable_variables()])
+        #self.loss = self.loss + regularization
         self.arg_max_prediction = tf.argmax(logits_2D, 1) #useless, if using negative sampling (i.e., negsample=True), it should be changed such as in predict_graph module
 
 
