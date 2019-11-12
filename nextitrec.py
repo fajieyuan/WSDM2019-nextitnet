@@ -56,9 +56,9 @@ def main():
     #this is a demo dataset, which just let you run this code, suggest dataset link: http://grouplens.org/datasets/.
     parser.add_argument('--datapath', type=str, default='Data/Session/user-filter-20000items-session5.csv',
                         help='data path')
-    parser.add_argument('--eval_iter', type=int, default=5000,
+    parser.add_argument('--eval_iter', type=int, default=1000,
                         help='Sample generator output evry x steps')
-    parser.add_argument('--save_para_every', type=int, default=10000,
+    parser.add_argument('--save_para_every', type=int, default=1000,
                         help='save model parameters every')
     parser.add_argument('--tt_percentage', type=float, default=0.2,
                         help='0.2 means 80% training 20% testing')
