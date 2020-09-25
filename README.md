@@ -1,3 +1,7 @@
+Note that there is a recent paper "Performance comparison of neural and non-neural approaches to session-based recommendation" arguing that NextItNet produces worse result than GRU4Rec and Caser, and run slowly during training. We have consulted with the author regarding this issue. The author replied us this is because of the session length problem. For example, if you use session length (i.e., window size) 20 for Caser but using 500 for NextItNet (the authors performed experiments in this way), then there will be 480 zeros padded, which will be very slow during training. Besides, using relatively smaller sessions also means you have more training sequences and thus will get better results if your dataset is not large enough.
+==================
+
+
 
 strongly suggest running the code on GPU, which is at least 20 times faster than on CPU. 
 You can email me if you have any questions about the performance and efficiency of NextItNet.
