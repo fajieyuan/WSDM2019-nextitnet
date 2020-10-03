@@ -76,6 +76,8 @@ class NextItNet_Decoder:
         probs_flat = tf.nn.softmax(logits_2D)
         # self.g_probs = tf.reshape(probs_flat, [-1, tf.shape(self.input_predict)[1], model_para['item_size']])
         self.g_probs = tf.reshape(probs_flat, [-1, 1, model_para['item_size']])
+        self.top_k = tf.nn.top_k(self.g_probs[:, -1], k=5, name='top-k')# much faster, if you change [probs] = sess.run([itemrec.g_probs],..)to [top_k] = sess.run([itemrec.top_k],..) in NextitNet_TF_Pretrain.py
+
         
      
     # output top-n based on recalled items instead of all items. You can use this interface for practical recommender systems.
