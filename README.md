@@ -42,7 +42,9 @@ Your testing data can be any length, but suggest you first using the same length
 
 note that the attached dataset is very small, you can use the user-filter-20000items-session5.csv.zip or using the below datasets
 Movielencs (http://files.grouplens.org/datasets/movielens/):
-link: https://drive.google.com/drive/my-drivev (it allows at least 20 layers for NextItNet, e.g., using dilation 1,4,1,4,1,4,1,4,1,4,)
+
+Link:  https://drive.google.com/drive/my-drivev (it allows at least 20 layers for NextItNet, e.g., using dilation 1,4,1,4,1,4,1,4,1,4,)
+
 download a large sequential dataset of tiktok: https://pan.baidu.com/s/1sdvA-prlW8cBVtFuuiqF3Q  
 code (提取码):wncu
 
