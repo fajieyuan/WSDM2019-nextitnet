@@ -159,25 +159,19 @@ def main():
                 curr_preds_5=[]
                 rec_preds_5=[] #1
                 ndcg_preds_5=[] #1
-                curr_preds_20 = []
-                rec_preds_20 = []  # 1
-                ndcg_preds_20  = []  # 1
                 while (batch_no_test + 1) * batch_size_test < valid_set.shape[0]:
                     if (numIters / (args.eval_iter) < 10):
-                        if (batch_no_test > 10):
+                        if (batch_no_test > 20):
                             break
                     else:
                         if (batch_no_test > 50):
                             break
                     item_batch = valid_set[batch_no_test * batch_size_test: (batch_no_test + 1) * batch_size_test, :]
-                    output_tokens_batch, maskedpositions_batch, maskedlabels_batch = create_masked_predictions_frombatch(
-                        item_batch)
 
                     [top_k_batch] = sess.run(
                         [itemrec.top_k],
                         feed_dict={
-                            itemrec.itemseq_input: output_tokens_batch,
-                            itemrec.masked_position: maskedpositions_batch
+                            itemrec.input_predict: item_batch,
                         })
                     top_k = np.squeeze(top_k_batch[1])
                     for bi in range(top_k.shape[0]):
@@ -216,7 +210,6 @@ def main():
                                 rec_preds_5) / float(
                                 len(rec_preds_5)), "ndcg_5:", sum(ndcg_preds_5) / float(
                                 len(ndcg_preds_5))
-
             numIters += 1
             if numIters % args.save_para_every == 0:
                 save_path = saver.save(sess,
