@@ -161,7 +161,7 @@ def main():
                 ndcg_preds_5=[] #1
                 while (batch_no_test + 1) * batch_size_test < valid_set.shape[0]:
                     if (numIters / (args.eval_iter) < 10):
-                        if (batch_no_test > 20):
+                        if (batch_no_test > 10):
                             break
                     else:
                         if (batch_no_test > 50):
