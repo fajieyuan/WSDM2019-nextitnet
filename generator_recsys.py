@@ -111,11 +111,6 @@ class NextItNet_Decoder:
         self.g_probs = probs_flat
         # newly added for weishi, since each input is one user (i.e., a batch), in fact we just need to rank the first batch, the below code is to select top-5
         # self.top_k= tf.nn.top_k(self.g_probs[:,-1], k=model_para['top_k'],name='top-k')
-        
-        self.top_k = tf.nn.top_k(self.g_probs[:, -1], k=5, name='top-k')# much faster, if you change [probs] = sess.run([itemrec.g_probs],..)to [top_k] = sess.run([itemrec.top_k],..) in NextitNet_TF_Pretrain.py
-
-
-
 
 
 
