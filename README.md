@@ -2,7 +2,7 @@ strongly suggest running the code on GPU, which is at least 20 times faster than
 You can email me if you have any questions about the performance and efficiency of NextItNet.
 
 
-If you want to use this model in product with extremely large items (e.g.,> 100 million items). You may have memory problem during training and prediction by using nextitrec.py. In this case, you just use our negative sampling setting for training, and recalled items for predicting instead of outputing a huge softmax, as shown in nextitrec__recall.py.
+If you want to use this model in product with extremely large items (e.g.,> 100 million items). You may have memory problem during training and prediction by using nextitrec.py. In this case, you just use our negative sampling setting for training, and recalled items for predicting instead of outputing a huge softmax, as shown in nextitrec__recall.py. Also, using  tf.estimator.Estimator class is much better for industrial application.
 
 In general, NextItNet is able to handle several millions of items with billions of interaction feedback, and performs much faster and better than LSTM/GRU using the same training setttings.
 
