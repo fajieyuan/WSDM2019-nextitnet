@@ -84,5 +84,11 @@ code (提取码):wncu
 A Simple Convolutional Generative Network for Next Item Recommendation
 
 
-We noticed that there is a Recsys paper "Performance comparison of neural and non-neural approaches to session-based recommendation" arguing that NextItNet produces worse results than GRU4Rec and Caser, and run slowly during training. We have consulted with the author regarding this issue. The author replied us this is because of the session length problem. For example, if you use session length (i.e., window size) 20 for Caser and GRU4Rec but using 500 for NextItNet (the authors performed experiments exactly in this way), then there will be 480 additional zeros padded for NextItNet, which is of course very slow during training. Besides, using relatively smaller sessions also means you have more training sequences and thus will get better results if your dataset is not large enough. In other words, the evaluation in this paper is unfair. Please refer to our paper regarding the data preprocessing. With a fair comparison, you definitely will find NextItNet performs better than GRU4Rec and Caser on most datasets。
+We noticed that there is a Recsys paper "Performance comparison of neural and non-neural approaches to session-based recommendation" arguing that NextItNet produces worse results than GRU4Rec and Caser, and run slowly during training. We have consulted with the author regarding this issue. The author replied us this is because of the session length problem. For example, if you use session length (i.e., window size) 20 for Caser and GRU4Rec but using 500 for NextItNet (the authors performed experiments exactly in this way), then there will be 480 additional zeros padded for NextItNet, which is of course very slow during training. Besides, using relatively smaller sessions also means you have more training sequences and thus will get better results if your dataset is not large enough. In other words, the evaluation in this paper is unfair. Please refer to our paper regarding the data preprocessing. 
+With a fair comparison, you definitely will find NextItNet performs better than GRU4Rec/LSTM4Rec and Caser on most datasets.
+<p align="center">
+    <br>
+    <img src="https://github.com/fajieyuan/nextitnet/blob/master/Data/reply.png" width="400"/>
+    <br>
+<p>
 
