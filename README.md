@@ -80,8 +80,7 @@ code (提取码):wncu
 
 [8]:https://github.com/tensorflow/models/tree/master/tutorials/rnn
 
-# nextitnet
-A Simple Convolutional Generative Network for Next Item Recommendation
+# Notice
 
 
 We noticed that there is a Recsys paper "Performance comparison of neural and non-neural approaches to session-based recommendation" arguing that NextItNet yields much worse results than GRU4Rec and other trivial baselines, and run extremely slow during training. We have consulted with the author regarding this issue. The author replied us this is because of the session length problem (see the attached image). 
