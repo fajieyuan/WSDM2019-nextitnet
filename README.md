@@ -88,7 +88,7 @@ We noticed that there is a Recsys paper "Performance comparison of neural and no
 With a fair comparison, you definitely will find NextItNet performs better than GRU4Rec/LSTM4Rec and Caser on most datasets.
 <p align="center">
     <br>
-    <img src="https://github.com/fajieyuan/nextitnet/blob/master/Data/reply.png" width="800"/>
+    <img src="https://github.com/fajieyuan/nextitnet/blob/master/Data/reply.png" width="1200"/>
     <br>
 <p>
 
