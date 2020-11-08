@@ -91,7 +91,7 @@ For example, if users have 50 positive interactions in average, the preprocessin
 In terms of training time, it is even much worse since padding around 450 zeros for each user session will of course make the training of NextItNet extremely slow.  In other words, the evaluations in this paper are performed on unfair settings and conclusions do not hold. Following our paper with a fair comparison, you definitely will find NextItNet performs better than GRU4Rec/LSTM4Rec and Caser on most datasets. Note we are not sure whether there are other inappropriate experimental settings when comparing other neural models with these non-neural models.
 <p align="center">
     <br>
-    <img src="https://github.com/fajieyuan/nextitnet/blob/master/Data/author_reply.png" width="1200"/>
+    <img src="https://github.com/fajieyuan/nextitnet/blob/master/Data/author.png" width="1200"/>
     <br>
 <p>
 
