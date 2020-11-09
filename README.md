@@ -21,7 +21,7 @@ Please cite this paper if you find our code is useful
 }
 
 
-1 )you can run nextitnet_topk.py (python nextitnet_topk.py or nextitnet_topk.py (slower for evaluation)) directly, which includes training and testing
+1 )you can run nextitnet_topk.py (python nextitnet_topk.py or nextitnet_topk.py (slower at the evaluation stage because we output full softmax)) directly, which includes training and testing
 
 2 )you can also run nextitrec_generate.py, which is only for predicting/generating. But you need make sure whether your model 
 variables have been saved when you run nextitrec.py. 
