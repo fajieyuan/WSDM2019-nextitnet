@@ -94,11 +94,11 @@ def main():
         # if you use nextitnet_residual_block, you can use [1, 4, 1, 4, 1,4,],
         # if you use nextitnet_residual_block_one, you can tune and i suggest [1, 2, 4, ], for a trial
         # when you change it do not forget to change it in nextitrec_generate.py
-        'dilations': [1, 2, 1, 2, 1, 2,],#YOU should tune this hyper-parameter, refer to the paper.
+        'dilations': [1, 2, 1, 2, 1, 2, 1, 2,],#YOU should tune this hyper-parameter, refer to the paper.
         'kernel_size': 3,
         'learning_rate':0.001,
         'batch_size':128,#YOU should tune this hyper-parameter, options: 32, 64, 128, 256
-        'iterations':400,# if your dataset is small, suggest adding regularization to prevent overfitting
+        'iterations':10,# if your dataset is small, suggest adding regularization to prevent overfitting
         'is_negsample':True #False denotes no negative sampling
     }
 
