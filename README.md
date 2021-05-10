@@ -39,8 +39,10 @@ Your training data should be some sequences of the same length, if the sequences
 
 Your testing data can be any length, but suggest you first using the same length for evalution, once you are familar with the model, you can change your data or slightly change the code to meet your requirements.
 
+## Dataset:
+sequential datasets that can be used to evaluate the depth of NextItNet：
+https://drive.google.com/file/d/1jir3KMMaBDRahiApkp91Uq4_y5VtEuYL/view?usp=sharing
 
-note that the attached dataset is very small, you can use the user-filter-20000items-session5.csv.zip or using the below datasets
 Movielencs (http://files.grouplens.org/datasets/movielens/):
 
 Link:  https://drive.google.com/file/d/1zy5CnpxmOgdQBoOMt0-zJUqIBeXMdLKc/view?usp=sharing (it allows at least 20 layers for NextItNet, e.g., using dilation 1,4,1,4,1,4,1,4,1,4,)
