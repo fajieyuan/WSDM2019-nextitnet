@@ -45,6 +45,7 @@ Video-6M: https://drive.google.com/file/d/1jir3KMMaBDRahiApkp91Uq4_y5VtEuYL/view
 
 We construct a large-scale session-based recommendation dataset (denoted as Video-6M) by collecting the interactiton behaviors of nearly 6 million users in a week  from a commercial recommender system. The dataset can be used to evaluate very deep recommendation models (up to 100 layers), such as NextItNet (as shown in our paper StackRec（SIGIR2021)). 
 If you use this dataset in your paper, you should cite our NextItNet and StackRec for publish permission. 
+Note: 58 is the padding token
 
 ```
 @article{wang2020stackrec,
