@@ -40,6 +40,9 @@ Your training data should be some sequences of the same length, if the sequences
 Your testing data can be any length, but suggest you first using the same length for evalution, once you are familar with the model, you can change your data or slightly change the code to meet your requirements.
 
 ## Dataset:
+
+https://drive.google.com/file/d/1jir3KMMaBDRahiApkp91Uq4_y5VtEuYL/view?usp=sharing
+
 We construct a large-scale session-based recommendation dataset (denoted as Video-6M) by collecting the interactiton behaviors of nearly 6 million users in a week  from a commercial recommender system. The dataset can be used to evaluate very deep recommendation models (up to 100 layers), such as NextItNet (as shown in our paper StackRec（SIGIR2021)). 
 If you find this dataset is useful, you should cite our paper NextItNet and StackRec for publish permission. 
 
@@ -51,9 +54,6 @@ If you find this dataset is useful, you should cite our paper NextItNet and Stac
   year={2021}
 }
 ```
-
-sequential datasets that can be used to evaluate the depth of NextItNet：
-https://drive.google.com/file/d/1jir3KMMaBDRahiApkp91Uq4_y5VtEuYL/view?usp=sharing
 
 Movielencs (http://files.grouplens.org/datasets/movielens/):
 
