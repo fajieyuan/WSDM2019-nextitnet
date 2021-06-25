@@ -1,13 +1,4 @@
-strongly suggest running the code on GPU, which is at least 20 times faster than on CPU. 
-You can email me if you have any questions about the performance and efficiency of NextItNet.
-
-
-If you want to use this model in product with extremely large items (e.g.,> 100 million items). You may have memory problem during training and prediction by using nextitrec.py. In this case, you just use our negative sampling setting for training, and recalled items for predicting instead of outputing a huge softmax, as shown in nextitrec__recall.py. Also, using  tf.estimator.Estimator class is much better for real production environments.
-
-In general, NextItNet is able to handle several millions of items with billions of interaction feedback, and performs much faster and better than LSTM/GRU using the same training setttings.
-
-There are many tricks to solve memory and efficiency problems and you can email me if you donot know how to do it. It is also very easy to add various features by concating (tf.concat) operation before convolution or after convolution.
-
+PyTorch version https://github.com/mlpotter/NextItNet/blob/main/model.py (not sure whether it is correct or not)
 
 
 Please cite this paper if you find our code is useful
@@ -20,13 +11,8 @@ Please cite this paper if you find our code is useful
   organization={ACM}
 }
 
-
-1 )you can run nextitnet_topk.py (python nextitnet_topk.py or nextitrec.py (slower at the evaluation stage because we output full softmax)) directly, which includes training and testing
-
-2 )you can also run nextitrec_generate.py, which is only for predicting/generating. But you need make sure whether your model 
-variables have been saved when you run nextitrec.py. 
-
-3 )MostPop.py is a baseline based on item popularity
+Notes:
+1 )you can run nextitnet_topk.py  directly, which includes training and testing
 
 
 Your training data should be some sequences of the same length, if the sequences are not the same length, padding 0 in the beggining, e.g.,
