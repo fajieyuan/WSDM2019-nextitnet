@@ -11,8 +11,9 @@ Please cite this paper if you find our code is useful
   organization={ACM}
 }
 
-Notes:
-1 )you can run nextitnet_topk.py  directly, which includes training and testing
+## Demo:
+1 )you can run nextitnet_topk.py 
+   python nextitnet_topk.py 
 
 
 Your training data should be some sequences of the same length, if the sequences are not the same length, padding 0 in the beggining, e.g.,
@@ -23,7 +24,7 @@ Your training data should be some sequences of the same length, if the sequences
 
 0,88,981,13,17
 
-Your testing data can be any length, but suggest you first using the same length for evalution, once you are familar with the model, you can change your data or slightly change the code to meet your requirements.
+If a user has 1000 interactions but most users have around 100 interactions，then i would suggest you use sequence length of 100 rather than 1000, since it is much slower by padding so many zeros. You can also simply split the longer sequences into many short subsequences.
 
 ## Dataset:
 
