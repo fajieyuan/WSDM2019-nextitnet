@@ -98,4 +98,6 @@ In terms of training time, it is even much worse since padding around 450 zeros 
 <p>
 
 # Hiring
-If you want to work with Fajie https://fajieyuan.github.io/, Please contact him by email yuanfajie@westlake.edu.cn. His lab is now recruiting visiting students, interns, research assistants, posdocs (Chinese yuan: 450,000-550,000 per year), and research scientists. You can also contact him if you want to pursue a Phd degree at Westlake University. Please feel free to talk to him (by weichat: wuxiangwangyuan) if you have ideas or papers for collaboration. He is open to various collaborations.西湖大学原发杰团队长期招聘：推荐系统和生物信息（尤其蛋白质相关）方向 ，科研助理，博士生，博后，访问学者，研究员系列。
+If you want to work with Fajie https://fajieyuan.github.io/, Please contact him by email yuanfajie@westlake.edu.cn. His lab is now recruiting visiting students, interns, research assistants, posdocs (Chinese yuan: 450,000-550,000 per year), and research scientists. You can also contact him if you want to pursue a Phd degree at Westlake University. Please feel free to talk to him (by weichat: wuxiangwangyuan) if you have ideas or papers for collaboration. He is open to various collaborations.
+  
+西湖大学原发杰团队长期招聘：推荐系统和生物信息（尤其蛋白质相关）方向 ，科研助理，博士生，博后，访问学者，研究员系列。
