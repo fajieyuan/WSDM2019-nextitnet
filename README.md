@@ -1,4 +1,5 @@
-PyTorch version https://github.com/mlpotter/NextItNet/blob/main/model.py (not sure whether it is correct or not)
+PyTorch version :
+https://github.com/syiswell/NextItNet-Pytorch 
 
 
 Please cite this paper if you find our code is useful
