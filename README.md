@@ -1,5 +1,4 @@
-# PyTorch version :
-https://github.com/syiswell/NextItNet-Pytorch 
+## PyTorch version : https://github.com/syiswell/NextItNet-Pytorch 
 
 
 Please cite this paper if you find our code is useful
