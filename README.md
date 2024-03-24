@@ -1,3 +1,5 @@
+Generative Sequential Recommendation Models Based on Autoregressive Generation
+
 ## PyTorch version 1: https://github.com/syiswell/NextItNet-Pytorch 
 
 ## Pytorch version 2: https://openreview.net/forum?id=PfuW84q25y9&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2022%2FTrack%2FDatasets_and_Benchmarks%2FAuthors%23your-submissions)
@@ -6,6 +8,7 @@
 
 Please cite this paper if you find our code is useful
 
+```
 @inproceedings{yuan2018simple,
   title={A Simple Convolutional Generative Network for Next Item Recommendation },
   author={Yuan, Fajie and Karatzoglou, Alexandros and Arapakis, Ioannis and Jose, Joemon M and He, Xiangnan},
@@ -13,6 +16,7 @@ Please cite this paper if you find our code is useful
   year={2019},
   organization={ACM}
 }
+```
 
 ## Demo:
 1 )you can run nextitnet_topk.py 
