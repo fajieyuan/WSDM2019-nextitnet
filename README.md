@@ -1,4 +1,4 @@
-Generative Sequential Recommendation Models Based on Autoregressive Generation
+## This is the first Generative Sequential Recommendation Model Based on Autoregressive Generation
 
 ## PyTorch version 1: https://github.com/syiswell/NextItNet-Pytorch 
 
